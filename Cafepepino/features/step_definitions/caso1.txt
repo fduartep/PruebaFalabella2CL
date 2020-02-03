@@ -1,0 +1,11 @@
+import { Selector } from 'testcafe';
+
+fixture `New Fixture`
+    .page `www.google.com`;
+
+test('New Test', async t => {
+    await t
+        .typeText(Selector('#tsf').find('[name="q"]'), 'falabella')
+        .pressKey('enter')
+        .click(Selector('h3').withText('Falabella.com - Mejor Compra Online'));
+});

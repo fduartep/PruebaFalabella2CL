@@ -1,0 +1,12 @@
+import { Selector } from 'testcafe';
+
+fixture `New Fixture`
+    .page `www.falabella.com`;
+
+test('New Test', async t => {
+    await t
+        .typeText(Selector('#searchQuestionSolr'), 'ps4')
+        .pressKey('enter')
+        .click(Selector('#testId-Pod-action-6512555'))
+        .click(Selector('button').withText('AGREGAR A LA BOLSA'));
+});
